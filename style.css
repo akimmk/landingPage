@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -51,7 +51,7 @@ body {
 }
 
 .animated-underline:hover::after {
-  /* width: 100%;  */
+  width: 100%;
 }
 
 .main-section {
@@ -70,9 +70,60 @@ body {
 }
 
 .text-section {
+  position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 35%;
+  width: 40%;
   margin-right: 10px;
   justify-content: center;
+}
+.text-section h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.text-section p {
+  line-height: 20px;
+  color: gray;
+}
+
+.shop-now {
+  text-decoration: none;
+  color: black;
+  max-width: 300px;
+  letter-spacing: 1em;
+  font-weight: 500;
+}
+.animated-underline.shop-now::after {
+  background-color: black;
+}
+.arrows {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 60px;
+}
+.arrow {
+  margin-left: -63px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.image-overlay {
+  margin-top: -5px;
+}
+
+.about-section {
+  display: flex;
+}
+.about-text {
+  padding: 40px;
+}
+.about-text h2 {
+  font-size: 16px;
+  letter-spacing: 0.5em;
+  font-weight: 700;
+}
+.about-text p {
+  line-height: 20px;
+  color: gray;
 }
