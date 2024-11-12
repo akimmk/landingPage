@@ -127,3 +127,97 @@ body {
   line-height: 20px;
   color: gray;
 }
+
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  .image-section {
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0; /* Remove extra margin */
+  }
+  .arrows {
+    position: absolute;
+    bottom: 324px;
+    right: 10%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px;
+    z-index: 2; /* Ensure arrows are above the image */
+  }
+
+  .arrow {
+    width: 40px; /* Adjust the size for mobile */
+    cursor: pointer;
+  }
+
+  .image-section img,
+  .text-section {
+    width: 100%; /* Ensure the image spans the full width */
+    height: auto;
+  }
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .image-overlay {
+    width: 100%;
+    object-fit: cover;
+  }
+  .image-overlay img {
+    width: 100%;
+    height: auto;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 150px;
+    justify-content: space-between;
+    z-index: 2; /* Ensure the navbar is above other content */
+    display: flex;
+    align-items: center;
+  }
+
+  .logo a {
+    font-size: 40px; /* Adjusted size for mobile */
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    background-color: transparent; /* Match the background */
+    font-size: 30px; /* Adjust size */
+  }
+
+  .nav-links {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    background-color: #858484; /* Background for dropdown */
+    position: absolute;
+    top: 60px; /* Positioned below the navbar */
+    left: 0;
+    width: 100%; /* Full-width */
+    padding: 10px 0;
+    z-index: 1; /* Ensure it overlays content */
+  }
+
+  .nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #fff; /* Optional styling */
+  }
+
+  .nav-links li a {
+    color: #fff;
+    font-size: 18px; /* Adjust size */
+  }
+
+  .text-section {
+    padding: 20px; /* Add padding for better spacing */
+  }
+}

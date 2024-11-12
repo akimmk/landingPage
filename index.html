@@ -13,9 +13,14 @@
   <body>
     <div class="header-section">
       <nav class="navbar">
+        <div class="hamburger" onclick="toggleMenu()">
+          &#9776;
+          <!-- Hamburger icon -->
+        </div>
         <div class="logo">
           <a href="#home" class="animated-underline">room</a>
         </div>
+
         <ul class="nav-links">
           <li><a href="#home" class="animated-underline">home</a></li>
           <li><a href="#shop" class="animated-underline">shop</a></li>
@@ -26,8 +31,18 @@
 
       <div class="main-section">
         <div class="image-section">
-          <img src="./images/desktop-image-hero-1.jpg" alt="Furniture Image" />
+          <picture>
+            <source
+              srcset="./images/mobile-image-hero-2.jpg"
+              media="(max-width: 768px)"
+            />
+            <img
+              src="./images/desktop-image-hero-3.jpg"
+              alt="Furniture Image"
+            />
+          </picture>
         </div>
+
         <div class="text-section">
           <h1>
             Discover innovative <br />
@@ -53,7 +68,13 @@
 
     <div class="about-section">
       <div class="image-overlay">
-        <img src="./images/image-about-dark.jpg" alt="Furniture Interior" />
+        <picture>
+          <source
+            srcset="./images/mobile-image-hero-2.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="./images/image-about-dark.jpg" alt="Furniture Image" />
+        </picture>
       </div>
       <div class="about-text">
         <h2>ABOUT OUR FURNIRUTE</h2>
@@ -67,8 +88,25 @@
         </p>
       </div>
       <div class="image-overlay">
-        <img src="./images/image-about-light.jpg" alt="Furniture Interior" />
+        <picture>
+          <source
+            srcset="./images/mobile-image-hero-1.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="./images/image-about-light.jpg" alt="Furniture Image" />
+        </picture>
       </div>
     </div>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "none";
+        } else {
+          navLinks.style.display = "flex";
+        }
+      }
+    </script>
   </body>
 </html>
